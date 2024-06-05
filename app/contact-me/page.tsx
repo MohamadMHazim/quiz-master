@@ -55,10 +55,8 @@ const ContactMe: React.FC = () => {
         title: 'Email Failed 😐!',
         text: 'Your email was not sent !.',
       });
-      console.log(err);
     },
   );
-    console.log("Form data is valid:", formData);
   };
 
   return (

@@ -31,7 +31,6 @@ const ButtonsContainer: React.FC<ButtonProps> = ({
 
     const userId = session?.user?.id;
     const quizId: number = parseInt(quizid, 10);
-    console.log("Quiz Id: ", quizId);
     const answers: { questionId: number; answer: string }[] = [];
     for (let i = 0; i < sessionStorage.length; i++) {
       const key = sessionStorage.key(i);

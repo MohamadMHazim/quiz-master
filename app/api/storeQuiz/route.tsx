@@ -5,7 +5,6 @@ import { Prisma } from "@prisma/client"; // Import Prisma to use its types
 export async function POST(request: NextRequest) {
   const body = await request.json();
   const { quizId, userId, answers } = body;
-  console.log("User ID: ", userId);
   const questions = await prisma.question.findMany({
     where: { quizId },
     include: {

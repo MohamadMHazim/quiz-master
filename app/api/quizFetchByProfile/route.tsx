@@ -4,7 +4,6 @@ import prisma from "@/prisma/client";
 export async function POST(request: NextRequest) {
   const body = await request.json();
   const userId = body.userId;
-  console.log("UserId: ", userId, typeof userId);
 
   // Get distinct (userId, quizId, tryId) tuples
   const userAnswers = await prisma.userAnswer.findMany({
@@ -12,7 +11,6 @@ export async function POST(request: NextRequest) {
     distinct: ["quizId", "tryid"], // Distinct by quizId and tryId
   });
 
-  console.log(userAnswers);
 
   // Fetch details for each try and calculate grade percentage
   const quizDetails = await Promise.all(
@@ -49,7 +47,6 @@ export async function POST(request: NextRequest) {
     })
   );
 
-  console.log(quizDetails);
 
   return NextResponse.json(quizDetails, { status: 200 });
 }

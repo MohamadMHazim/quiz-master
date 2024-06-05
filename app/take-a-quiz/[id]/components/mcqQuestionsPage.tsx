@@ -42,7 +42,6 @@ const MCQQuestion: React.FC<MCQQuestionProps> = ({
     );
     onNext();
   };
-  console.log(sessionStorage);
   return (
     <div className="w-full max-w-md p-6 bg-white shadow-md">
       <h2 className="text-2xl font-semibold mb-4 text-purple-800">

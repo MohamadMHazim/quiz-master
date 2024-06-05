@@ -1,0 +1,4 @@
+To make the database functional, you should have installed mySql in your machine.
+1. change the database link in the .env file to the ones on your machine.
+2. run "npx prisma migrate dev".
+3. you're good to go !
